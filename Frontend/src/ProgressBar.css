@@ -1,0 +1,257 @@
+/* Main container */
+.question-container {
+  width: 80%;
+  margin: 10% auto;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: #3c096c;
+}
+
+/* Progress bar */
+.progress-bar-container{
+  display: flex ;
+  gap: 25px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.progress-bar {
+  width: 80%;
+  background-color: #e0e0e0;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: blueviolet;
+  transition: width 0.3s ease;
+}
+
+/* Question title */
+.question-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: blueviolet;
+}
+
+/* Options */
+.options-container {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.option-label {
+  display: block;
+  font-size: 1.2rem;
+  color: #3c096c;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.option-label input {
+  margin-right: 10px;
+  accent-color: blueviolet;
+  cursor: pointer;
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-button {
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #5a189a;
+  transform: scale(1.05);
+}
+
+.nav-button:disabled {
+  background-color: #e0e0e0;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+/* Popup Card */
+.popup-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-gif {
+  width: 200px;
+  height: auto;
+}
+
+.popup-message {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+/* Popup Card */
+.popup-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Specific styles for correct and wrong popups */
+.popup-card.correct {
+  border: 3px solid #4caf50;
+}
+
+.popup-card.wrong {
+  border: 3px solid #f44336;
+}
+
+.popup-gif {
+  width: 200px;
+  height: auto;
+}
+
+.popup-message {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+/* Popup Card */
+.popup-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Specific styles for correct and wrong popups */
+.popup-card.correct {
+  border: 3px solid #4caf50;
+}
+
+.popup-card.wrong {
+  border: 3px solid #f44336;
+}
+
+.popup-gif {
+  width: 80px;
+  height: 80px;
+}
+
+.popup-message {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+/* Spinner Container */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  background-color: #f9f9f9; /* Light background */
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f3f3f3; /* Light gray background */
+  border-top: 6px solid blueviolet; /* Green spinner arc */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner Animation Keyframes */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Optional Loading Text */
+.loader-container h2 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+  font-family: Arial, sans-serif;
+}
